@@ -34,7 +34,7 @@ class Login {
 				const token = jwt.sign(
 					{ email: emailId, password: password },
 					res.locals.app.appSecret,
-					{ algorithms: ['HS256'],
+					{ 
 						expiresIn: res.locals.app.jwtExpiresIn * 60 }
 				);
 				targetEntity.password = undefined;

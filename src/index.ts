@@ -57,7 +57,7 @@ import * as cluster from 'cluster';
 import App from './providers/App';
 import locals from './providers/Locals';
 import NativeEvent from './exception/NativeEvent';
-if (locals.config().clusterEnabled &&  cluster.isMaster) {
+if (cluster.isMaster) {
 	/**
 	 * Catches the process events
 	 */
